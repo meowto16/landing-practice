@@ -8,6 +8,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "serve": "serve ./dist",
     "lint": "eslint 'src/**/*.js' || true",
     "prettify": "prettier --write 'src/**/*.js'"
   },
@@ -32,11 +33,12 @@
     "eslint-plugin-prettier": "^4.0.0",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.4.2",
-    "sass": "^1.43.5",
     "postcss-loader": "^6.2.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.4.1",
+    "sass": "^1.43.5",
     "sass-loader": "^12.2.0",
+    "serve": "^13.0.2",
     "style-loader": "^3.3.0",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0",
