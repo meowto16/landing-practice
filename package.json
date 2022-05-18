@@ -48,5 +48,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:taniarascia/webpack-boilerplate"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
