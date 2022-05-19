@@ -4,3 +4,129 @@
 @import 'fonts';
 @import 'scaffolding';
 
+.container {
+  max-width: $container-xl;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  font-family: $font-DMSans;
+  font-size: 17px;
+  line-height: 20px;
+  padding: 19px 60px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.15s ease-in background;
+  text-align: center;
+  cursor: pointer;
+
+  &, &--white {
+    background: $color-white;
+    color: $color-purple;
+    outline-color: $color-grey;
+
+    &:hover {
+      background: darken($color-white, 3%);
+    }
+  }
+
+  &--purple {
+    background: $color-purple;
+    color: $color-white;
+    outline-color: darken($color-purple, 20%);
+
+    &:hover {
+      background: darken($color-purple, 3%);
+    }
+  }
+
+  &--orange {
+    background: $color-orange;
+    color: $color-white;
+    outline-color: darken($color-orange, 20%);
+
+    &:hover {
+      background: darken($color-orange, 3%);
+    }
+  }
+
+  &--dark-orange {
+    background: $color-orange-dark;
+    color: $color-white;
+
+    &:hover {
+      background: darken($color-orange-dark, 3%);
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  justify-content: space-between;
+
+  &__logo {
+    margin-right: 40px;
+  }
+
+  &__logo-link {
+    display: block;
+    width: 199px;
+    height: 39px;
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__action {
+    margin-left: 40px;
+  }
+}
+
+.nav {
+  display: flex;
+
+  &__item {
+    position: relative;
+    font-family: $font-DMSans;
+    font-size: 15px;
+    line-height: 18px;
+    color: $color-grey;
+    transition: 0.15s ease-in color;
+    text-decoration: none;
+    margin-right: 49px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 2px;
+      width: 100%;
+      background: $color-purple;
+      transform-origin: 50%;
+      transform: scaleX(0%);
+      transition: 0.15s ease-in transform;
+    }
+
+    &:last-child {
+      margin-right: unset;
+    }
+
+    &--active {
+      color: $color-black;
+
+      &::after {
+        transform: scaleX(100%);
+      }
+    }
+  }
+}
