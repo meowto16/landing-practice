@@ -10,7 +10,7 @@
   <link rel="icon" href="/favicon-32x32.png" sizes="32x32">
 </head>
 <body>
-<header class="header container">
+<header class="header header--absolute container">
   <div class="header__logo">
     <a class="header__logo-link" href="#">
       <img src="/images/svg/logo.svg" width="199" height="39" alt="Logoipsum logo">
@@ -27,8 +27,8 @@
   </div>
 </header>
 <main class="main">
-  <section class="s-hero container" id="home">
-    <div class="hero-block">
+  <section class="s-hero js-hero-3d-container" id="home">
+    <div class="hero-block container">
       <div class="hero-block__left">
         <h1 class="hero-block__title">Grow your subscription business</h1>
         <p class="hero-block__desc">
@@ -36,28 +36,30 @@
           subscription business end-to-end.
         </p>
         <div class="hero-block__actions">
-          <button class="btn btn--purple">Get Started</button>
-          <button class="btn btn--circle">down icon</button>
+          <button class="btn btn--purple hero-block__action">Get Started</button>
+          <button class="btn btn--circle hero-block__action" aria-label="Go down">
+            <span class="icon icon--arrow-down"></span>
+          </button>
         </div>
       </div>
       <div class="hero-block__right">
-        <div class="hero-block__image hero-3d">
+        <div class="hero-block__image hero-3d js-hero-3d">
           <img
-            class="hero-3d__man"
+            class="hero-3d__man js-hero-3d-man"
             src="/images/png/hero-3d-man.png"
             alt="Hero 3D man"
             width="580"
             height="644"
           />
           <img
-            class="hero-3d__chat"
+            class="hero-3d__chat hero-3d__chat--active js-hero-3d-chat"
             src="/images/png/hero-3d-chat.png"
             alt="Hero 3D chat"
             width="229"
             height="153"
           />
           <img
-            class="hero-3d__background"
+            class="hero-3d__background js-hero-3d-background"
             src="/images/png/hero-3d-background.png"
             alt="Hero 3D background"
             width="554"
